@@ -1,4 +1,5 @@
 import 'package:ecomapp/views/auth/register_view.dart';
+import 'package:ecomapp/views/home/home_view.dart';
 import 'package:ecomapp/views/widgets/button_widget.dart';
 import 'package:ecomapp/views/widgets/text_field_widget.dart';
 import 'package:flutter/material.dart';
@@ -68,7 +69,12 @@ class _LoginViewState extends State<LoginView> {
                       ),
                     ),
                     SizedBox(height: 6),
-                    ButtonWidget(text: 'Sign In', onPressed: () {}),
+                    ButtonWidget(
+                      text: 'Sign In',
+                      onPressed: () {
+                        Get.to(() => const HomeView());
+                      },
+                    ),
                   ],
                 ),
               ),
